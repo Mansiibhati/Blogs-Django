@@ -1,0 +1,11 @@
+<h2>{{ post.title }}</h2>
+<p>Author: {{ post.author }}</p>
+<p>Content: {{ post.content }}</p>
+<p>Creation Date: {{ post.creation_date }}</p>
+{% if post.published_date %}
+<p>Published Date: {{ post.published_date }}</p>
+{% else %}
+<p>Status: Draft</p>
+{% endif %}
+
+<a href="{% url 'home' %}">Home</a>

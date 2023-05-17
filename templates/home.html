@@ -1,0 +1,36 @@
+<style>
+    .post{
+        border: solid 1px;
+
+    }
+
+</style>
+{% if user.is_authenticated %}
+    <h2>Welcome, {{ user.username }}!</h2>
+    <a href="{% url 'create_post' %}">Create New Post</a> <a href="{% url 'logout' %}">Logout</a>
+    {% for post in posts %}
+        <div class="post">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <p>Status: {{ post.status }}</p>
+            <a href="{% url 'update_post' post.id %}">Update</a>
+            <a href="{% url 'post_detail' post.id %}">View Post</a>
+            <a href="{% url 'delete_post' post.id %}">Delete</a>
+        </div>
+        <!--Display other post details as needed-->
+    {% endfor %}
+    {% if post %}
+        <a href="{% url 'post_detail post.pk' %}">View Post</a>
+    {% endif %}
+{% else %}
+    <h2>Welcome, guest!</h2>
+    <!-- Your guest user content goes here -->
+    <p>Please Login to Update Post.</p>
+    <a href="{% url 'login' %}">Login</a>
+    {% for post in posts %}
+    <div class="post">
+        <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        <p>{{ post.content }}</p>
+    </div>
+    {% endfor %}
+{% endif %}

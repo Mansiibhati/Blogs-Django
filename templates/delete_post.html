@@ -1,0 +1,7 @@
+<h2>Are you sure you want to delete this post?</h2>
+<p>Title: {{ post.title }}</p>
+<p>Content: {{ post.content }}</p>
+<form action="{% url 'delete_post' post.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
