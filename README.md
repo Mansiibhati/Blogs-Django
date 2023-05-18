@@ -7,8 +7,7 @@
     - Scripts\activate.bat
 # After the virtualenv has set up you need to insatll Django-
     - pip install Django
-# To run the project navigate into the folder and run the following commands in your shell-
-Go to the project directory "Blogs-Django" and run these commands
+# To run the project navigate into the folder and run the following commands in your shell- Go to the project directory "Blogs-Django" and run these commands
     - python manage.py makemigration
     - python manage.py migrate 
 # Then run the development server by the following command - 
