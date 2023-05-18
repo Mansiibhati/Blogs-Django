@@ -10,13 +10,14 @@
 # To run the project navigate into the folder and run the following commands in your shell-
 Go to the project directory "Blogs-Django" and run these commands
     - python manage.py makemigration
-    - python manage.py migrate
-# Create a supersuer for the project to run-
-    - python manage.py createsuperuser
-    - You will be prompted to enter email, password, and username. 
+    - python manage.py migrate 
 # Then run the development server by the following command - 
     - python manage.py runserver
-    After ther server is on, in the browser paste this- http://127.0.0.1:8000/  and you'll get a 
+    After ther server is on, in the browser paste this- http://127.0.0.1:8000/  and you'll get home page
+
+# Use this usernae and password to login
+    - username: mansibhati
+    - password: nonstopio
 
 # Welcome guest page where the blogs will be visible.
 ![Screenshot (48)](https://github.com/Mansiibhati/Blogs-Django/assets/131988812/71b5c2bb-7b74-4bff-8c25-ea22650a5aec)

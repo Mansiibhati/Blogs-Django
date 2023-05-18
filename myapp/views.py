@@ -18,7 +18,7 @@ def create_post(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'create_post', {'form':form})
+    return render(request, 'create_post.html', {'form':form})
 
 @login_required
 def update_post(request,pk):
@@ -39,11 +39,11 @@ def update_post(request,pk):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
-        return render(request, 'update_post', {'form':form})
+        return render(request, 'update_post.html', {'form':form})
     
 def post_detail(request, pk):
     post = get_object_or_404(Post,pk=pk)
-    return render(request, 'post_detail', {'post': post})
+    return render(request, 'post_detail.html', {'post': post})
 
 def home(request):
     if request.user.is_authenticated:
@@ -51,7 +51,7 @@ def home(request):
     else:
         posts = Post.objects.filter(status = 'published')
 
-    return render(request, 'home',{'posts': posts})
+    return render(request, 'home.html',{'posts': posts})
 
 def delete_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
@@ -59,7 +59,7 @@ def delete_post(request, post_id):
         post.delete()
         return redirect('home')
     else:
-        return render(request, 'delete_post', {'post': post})
+        return render(request, 'delete_post.html', {'post': post})
     
 
 
