@@ -3,6 +3,8 @@ step 1 : Create a Virtual Environment and activate it in your shell by-
          virtualenv django
          cd django
          Scripts\activate.bat
+         After the virtualenv has set up you need to insatll Django-
+          pip install Django
 step 2 : To run the project navigate into the folder and run the following commands in your shell-
           python manage.py makemigration
           python manage.py migrate
