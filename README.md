@@ -1,3 +1,6 @@
+# Clone the repositioery from this command 
+    - git clone https://github.com/Mansiibhati/Blogs-Django.git
+
 # Create a Virtual Environment and activate it in your shell by-
     - virtualenv django
     - cd django
@@ -5,6 +8,7 @@
 # After the virtualenv has set up you need to insatll Django-
     - pip install Django
 # To run the project navigate into the folder and run the following commands in your shell-
+Go to the project directory "Blogs-Django" and run these commands
     - python manage.py makemigration
     - python manage.py migrate
 # Create a supersuer for the project to run-
