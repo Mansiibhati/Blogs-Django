@@ -1,7 +1,7 @@
-step 1 : Create a Virtual Environment and activate it in your shell by-
-         cd Desktop
-         virtualenv django
-         cd django
+# Create a Virtual Environment and activate it in your shell by-
+    - sdds
+    - virtualenv django
+    - cd django
          Scripts\activate.bat
          After the virtualenv has set up you need to insatll Django-
           pip install Django
