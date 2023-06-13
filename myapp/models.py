@@ -13,6 +13,7 @@ class Post(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(null=True, blank=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
+    a = models.CharField(max_length=250,null=True)
 
     delete_url = models.URLField(blank=True)
 
